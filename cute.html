@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cute Surprise</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial;
+text-align:center;
+background:linear-gradient(45deg,#ffc0cb,#ff99cc,#ffb6c1);
+overflow:hidden;
+}
+
+h1{
+margin-top:40px;
+font-size:40px;
+color:darkred;
+text-shadow:0 0 10px white;
+}
+
+.box{
+background:white;
+width:70%;
+margin:auto;
+padding:30px;
+border-radius:20px;
+box-shadow:0 0 25px pink;
+margin-top:30px;
+}
+
+p{
+font-size:20px;
+line-height:1.7;
+}
+
+/* floating hearts */
+.heart{
+position:fixed;
+bottom:-10px;
+font-size:22px;
+color:red;
+animation:float 6s linear infinite;
+}
+@keyframes float{
+from{transform:translateY(0);}
+to{transform:translateY(-100vh);}
+}
+
+/* cute glowing button */
+a{
+display:inline-block;
+margin-top:20px;
+padding:12px 20px;
+background:hotpink;
+color:white;
+text-decoration:none;
+border-radius:12px;
+font-size:16px;
+}
+</style>
+</head>
+<body>
+
+<h1>💖 Surprise Opened 💖</h1>
+
+<div class="box">
+
+<p>
+No matter what our pasts were, I believe that in the future it will be us —
+just you and me, growing, learning, and staying strong together.
+I hope our bond is never broken, and I hope we always try our best
+to understand and support each other.
+</p>
+
+<p>
+Just so you know, I truly care about you a lot. You make ordinary days feel
+special, and your presence brings comfort and happiness.
+</p>
+
+<p>
+🌹 Happy Rose Day, Shreeraamm Babbyy 🌹  
+May our bond stay filled with trust, smiles, laughter, and beautiful memories.
+</p>
+
+<a href="index.html">⬅ Go Back Home</a>
+
+</div>
+
+<script>
+/* floating hearts animation */
+setInterval(function(){
+let heart=document.createElement("div");
+heart.className="heart";
+heart.style.left=Math.random()*100+"%";
+heart.innerHTML="❤";
+document.body.appendChild(heart);
+setTimeout(()=>heart.remove(),6000);
+},400);
+</script>
+
+</body>
+</html>

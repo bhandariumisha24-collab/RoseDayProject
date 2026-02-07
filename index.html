@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Rose Day Ultra Pro Max</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial;
+background:linear-gradient(45deg,#ffb6c1,#ffc0cb,#ff99cc);
+text-align:center;
+overflow-x:hidden;
+}
+
+header{
+font-size:42px;
+padding:20px;
+font-weight:bold;
+color:darkred;
+text-shadow:0 0 15px white;
+}
+
+.card{
+background:white;
+width:75%;
+margin:auto;
+padding:25px;
+border-radius:20px;
+box-shadow:0 0 25px pink;
+}
+
+p{
+font-size:19px;
+line-height:1.7;
+text-align:justify;
+}
+
+.envelope{
+font-size:95px;
+cursor:pointer;
+transition:0.3s;
+}
+.envelope:hover{transform:scale(1.2);}
+
+button{
+padding:12px 18px;
+margin:8px;
+background:hotpink;
+color:white;
+border:none;
+border-radius:10px;
+font-size:16px;
+cursor:pointer;
+}
+
+footer{
+margin-top:20px;
+font-weight:bold;
+}
+
+/* floating hearts */
+.heart{
+position:fixed;
+bottom:-10px;
+color:red;
+animation:float 6s linear infinite;
+}
+@keyframes float{
+from{transform:translateY(0);}
+to{transform:translateY(-100vh);}
+}
+
+/* countdown */
+#timer{
+font-size:22px;
+color:darkred;
+margin:10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>🌹 Rose Day – Ultra Pro Max 🌹</header>
+
+<div class="card">
+
+<h2 id="type"></h2>
+
+<p>
+I know we’ve only been together for a day or two, but it already feels like
+I’ve known you for years. Some connections feel natural, easy, and warm.
+Even small conversations start to feel special and meaningful.
+</p>
+
+<p>
+This Rose Day, this little space is made to celebrate smiles, kindness, and
+the happiness that comes from making someone feel important.
+</p>
+
+<h2>Click the Heart Envelope 💌</h2>
+<a href="message.html">
+<div class="envelope">💖</div>
+</a>
+
+
+
+<footer>
+Made by Umisha Bhandari – Grade 8 "B"
+</footer>
+
+</div>
+
+<script>
+/* Typewriter */
+let text="🌸 Happy Rose Day 🌸";
+let i=0;
+function type(){
+if(i<text.length){
+document.getElementById("type").innerHTML+=text.charAt(i);
+i++;
+setTimeout(type,60);
+}
+}
+type();
+
+/* music */
+function playMusic(){
+document.getElementById("song").play();
+}
+
+/* floating hearts */
+setInterval(function(){
+let heart=document.createElement("div");
+heart.className="heart";
+heart.style.left=Math.random()*100+"%";
+heart.innerHTML="❤";
+document.body.appendChild(heart);
+setTimeout(()=>heart.remove(),6000);
+},400);
+
+/* countdown */
+let end=new Date("Feb 14, 2026 00:00:00").getTime();
+setInterval(function(){
+let now=new Date().getTime();
+let d=end-now;
+let days=Math.floor(d/(1000*60*60*24));
+document.getElementById("timer").innerHTML=
+"⏳ Days until Valentine: "+days;
+},1000);
+</script>
+
+</body>
+</html>

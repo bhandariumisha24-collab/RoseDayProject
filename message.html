@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Special Message</title>
+
+<style>
+body{
+background:black;
+color:white;
+text-align:center;
+padding-top:100px;
+font-family:Arial;
+}
+
+h1{
+color:pink;
+font-size:38px;
+}
+
+p{
+font-size:22px;
+width:70%;
+margin:auto;
+}
+
+a{
+display:inline-block;
+margin-top:25px;
+padding:10px 18px;
+background:hotpink;
+color:white;
+text-decoration:none;
+border-radius:10px;
+}
+
+/* fireworks dots */
+.spark{
+position:fixed;
+width:6px;
+height:6px;
+background:yellow;
+animation:boom 1s linear infinite;
+}
+@keyframes boom{
+from{transform:scale(1);}
+to{transform:scale(3);opacity:0;}
+}
+</style>
+</head>
+<body>
+
+<h1>🌹 A Rose For You 🌹</h1>
+
+<p>
+Shreeraamm Babbyy, this rose carries a small message filled with warmth and care.
+Sometimes even a short time can feel special, and even simple moments can become
+memories that stay in the heart for a long time.
+
+No matter what our pasts were, I truly believe that in the future, it will be us — just you and me, moving forward together. I hope our bond stays strong and unbreakable through every moment. I hope we both always try our best, understand each other, and protect what we have. I hope that with time, everything becomes even more beautiful and meaningful.
+
+Just so you know, I do love you. I will always care for you deeply and wish the best for us, today and in the days to come. Thank you for being someone who makes even ordinary moments feel special, someone who brings comfort, smiles, and a sense of closeness that is hard to explain.
+
+On this Rose Day, I’m sending you a rose filled with appreciation, hope, and all my warm feelings. May our journey be full of laughter, trust, and endless memories. No matter where life takes us, I’ll always value what we share.
+
+Happy Rose Day 🌹
+</p>
+
+<a href="secret.html">Open Secret Page 🔐</a>
+<br>
+<a href="index.html">⬅ Back</a>
+
+<script>
+setInterval(function(){
+let s=document.createElement("div");
+s.className="spark";
+s.style.left=Math.random()*100+"%";
+s.style.top=Math.random()*100+"%";
+document.body.appendChild(s);
+setTimeout(()=>s.remove(),1000);
+},200);
+</script>
+
+</body>
+</html>
